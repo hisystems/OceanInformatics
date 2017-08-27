@@ -1,0 +1,56 @@
+﻿<div class="container-fluid container-fixed-lg">
+    <ul class="breadcrumb">
+        <li>
+            <a href="http://oceaninformatics.com">Home</a>
+        </li>
+        <li>
+            <a href="#" class="active">Patients</a>
+        </li>
+    </ul>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-title">
+                Patients
+            </div>
+        </div>
+        <p></p>
+        <div class="panel-body">
+            <form>
+                <error error="vm.error"></error>
+
+                <div class="table-responsive" ng-show="vm.patients.length > 0">
+                    <div class="dataTables_wrapper form-inline no-footer">
+                        <table class="table table-hover dataTable no-footer" role="grid">
+                            <thead>
+                                <tr role="row">
+                                    <th style="width: 25%">Identifier</th>
+                                    <th style="width: 25%">Name</th>
+                                    <th style="width: 25%">Gender</th>
+                                    <th style="width: 25%">Date of Birth</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr role="button" ng-repeat="patient in vm.patients" ng-click="vm.rowClicked(patient)">
+                                    <td class="v-align-middle">
+                                        <strong>{{patient.identifier}}</strong>
+                                    </td>
+                                    <td class="v-align-middle">
+                                        <div>{{patient.familyName | uppercase}}, {{patient.givenName}}</div>
+                                    </td>
+                                    <td class="v-align-middle">
+                                        <div>{{vm.genders[patient.gender]}}</div>
+                                    </td>
+                                    <td class="v-align-middle">
+                                        {{patient.dateOfBirth | date: 'mediumDate'}}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

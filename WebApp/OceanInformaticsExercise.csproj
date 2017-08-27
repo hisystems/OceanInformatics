@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{349C5851-65DF-11DA-9384-00065B846F21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{CAA345B8-6EE3-4EA3-B775-112040A41849}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MoleChecks.Web</RootNamespace>
+    <AssemblyName>MoleChecks.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <UseGlobalApplicationHostFile />
+    <TypeScriptToolsVersion>2.4</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptCompileOnBuildEnabled>True</TypeScriptCompileOnBuildEnabled>
+    <TypeScriptRemoveComments>True</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+    <TypeScriptOutFile>
+    </TypeScriptOutFile>
+    <TypeScriptOutDir>
+    </TypeScriptOutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>False</TypeScriptNoEmitOnError>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <XspParameters Port="8081" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
+    <VisualStudio>
+      <FlavorProperties GUID="{349C5851-65DF-11DA-9384-00065B846F21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <ItemGroup>
+    <None Include="index.html" />
+    <None Include="gulpfile.js" />
+    <TypeScriptCompile Include="app\auth\Authentication.ts" />
+    <TypeScriptCompile Include="app\auth\AuthenticationController.ts" />
+    <TypeScriptCompile Include="app\model\IResource.ts" />
+    <TypeScriptCompile Include="app\patients\PatientController.ts" />
+    <TypeScriptCompile Include="libraries\angular\ui-bootstrap.d.ts" />
+    <Content Include="app\patients\Patient.html" />
+    <Content Include="libraries\angular\ui-bootstrap-tpls-2.5.0.min.js" />
+    <None Include="package.json" />
+    <None Include="libraries\angular\angular.min.js" />
+    <TypeScriptCompile Include="libraries\angular\angular.d.ts" />
+    <TypeScriptCompile Include="app\model\Patient.ts" />
+    <TypeScriptCompile Include="app\OceanInformaticsApp.ts" />
+    <TypeScriptCompile Include="libraries\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="libraries\angular\angular-ui-router.d.ts" />
+    <TypeScriptCompile Include="app\patients\PatientsController.ts" />
+    <TypeScriptCompile Include="libraries\moment\moment.d.ts" />
+    <TypeScriptCompile Include="libraries\underscore\underscore.d.ts" />
+    <TypeScriptCompile Include="app\model\Patients.ts" />
+    <TypeScriptCompile Include="app\library\Error.ts" />
+    <TypeScriptCompile Include="app\model\OceanInformaticsData.ts" />
+    <Content Include="images\pages\editor_tray.png" />
+    <Content Include="images\pages\editor_tray_2x.png" />
+    <Content Include="images\pages\icons\noti-cross-2x.png" />
+    <Content Include="images\pages\icons\noti-cross.png" />
+    <Content Include="images\pages\icons\sort_asc.png" />
+    <Content Include="images\pages\icons\sort_asc_disabled.png" />
+    <Content Include="images\pages\icons\sort_both.png" />
+    <Content Include="images\pages\icons\sort_desc.png" />
+    <Content Include="images\pages\icons\sort_desc_disabled.png" />
+    <Content Include="images\pages\icons\top_tray.png" />
+    <Content Include="images\pages\icons\top_tray_2x.png" />
+    <Content Include="images\pages\icons\top_tray_bluish.png" />
+    <Content Include="images\pages\linear_gradient.png" />
+    <Content Include="images\pages\notes_lines.png" />
+    <Content Include="images\pages\progress\progress-bar-complete.svg" />
+    <Content Include="images\pages\progress\progress-bar-danger.svg" />
+    <Content Include="images\pages\progress\progress-bar-info.svg" />
+    <Content Include="images\pages\progress\progress-bar-master.svg" />
+    <Content Include="images\pages\progress\progress-bar-primary.svg" />
+    <Content Include="images\pages\progress\progress-bar-success.svg" />
+    <Content Include="images\pages\progress\progress-bar-warning.svg" />
+    <Content Include="images\pages\progress\progress-circle-complete.svg" />
+    <Content Include="images\pages\progress\progress-circle-danger.svg" />
+    <Content Include="images\pages\progress\progress-circle-info.svg" />
+    <Content Include="images\pages\progress\progress-circle-lg-master-static.svg" />
+    <Content Include="images\pages\progress\progress-circle-lg-master.svg" />
+    <Content Include="images\pages\progress\progress-circle-lg-white-static.svg" />
+    <Content Include="images\pages\progress\progress-circle-lg-white.svg" />
+    <Content Include="images\pages\progress\progress-circle-master.svg" />
+    <Content Include="images\pages\progress\progress-circle-primary.svg" />
+    <Content Include="images\pages\progress\progress-circle-success.svg" />
+    <Content Include="images\pages\progress\progress-circle-warning.svg" />
+    <Content Include="libraries\moment\moment.js" />
+    <Content Include="libraries\pages.directives\cs-select.js" />
+    <Content Include="libraries\pages.directives\pg-dropdown.js" />
+    <Content Include="libraries\pages.directives\pg-form-group.js" />
+    <Content Include="libraries\pages.directives\pg-navigate.js" />
+    <Content Include="libraries\pages.directives\pg-portlet.js" />
+    <Content Include="libraries\pages.directives\pg-search.js" />
+    <Content Include="libraries\pages.directives\pg-sidebar.js" />
+    <Content Include="libraries\pages.directives\pg-tab.js" />
+    <Content Include="libraries\pages\pages.js" />
+    <Content Include="libraries\angular\angular-sanitize.min.js" />
+    <Content Include="libraries\angular\ui-utils.min.js" />
+    <Content Include="libraries\pages\plugins\bootstrapv3\css\bootstrap-theme.min.css" />
+    <Content Include="libraries\pages\plugins\bootstrapv3\css\bootstrap.min.css" />
+    <Content Include="libraries\pages\plugins\bootstrapv3\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="libraries\pages\plugins\bootstrapv3\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="libraries\pages\plugins\bootstrapv3\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="libraries\pages\plugins\bootstrapv3\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="libraries\pages\plugins\bootstrapv3\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="libraries\pages\plugins\bootstrapv3\js\bootstrap.js" />
+    <Content Include="libraries\pages\plugins\bootstrapv3\js\bootstrap.min.js" />
+    <Content Include="libraries\pages\plugins\classie\classie.js" />
+    <Content Include="libraries\pages\plugins\jquery-actual\jquery.actual.min.js" />
+    <Content Include="libraries\pages\plugins\jquery-bez\jquery.bez.min.js" />
+    <Content Include="libraries\pages\plugins\jquery-datatable\media\js\dataTables.bootstrap.min.js" />
+    <Content Include="libraries\pages\plugins\jquery-datatable\media\js\jquery.dataTables.min.js" />
+    <Content Include="libraries\pages\plugins\jquery-inputmask\jquery.inputmask.min.js" />
+    <Content Include="libraries\pages\plugins\jquery-scrollbar\jquery.scrollbar.css" />
+    <Content Include="libraries\pages\plugins\jquery-scrollbar\jquery.scrollbar.js" />
+    <Content Include="libraries\pages\plugins\jquery-scrollbar\jquery.scrollbar.min.js" />
+    <Content Include="libraries\pages\plugins\jquery-ui\jquery-ui-1.10.1.custom.min.css" />
+    <Content Include="libraries\pages\plugins\jquery-ui\jquery-ui.min.js" />
+    <Content Include="libraries\pages\plugins\jquery-ui\jquery-ui2.min.js" />
+    <Content Include="libraries\pages\plugins\jquery-ui\jquery-ui_back.min.js" />
+    <Content Include="libraries\pages\plugins\jquery-unveil\jquery.unveil.min.js" />
+    <Content Include="libraries\pages\plugins\jquery\jquery-1.11.1.min.js" />
+    <Content Include="libraries\pages\plugins\jquery\jquery-easy.js" />
+    <Content Include="libraries\pages\plugins\modernizr.custom.js" />
+    <Content Include="libraries\pages\plugins\ng-switchery\ng-switchery.js" />
+    <Content Include="libraries\pages\plugins\pace\pace-theme-flash.css" />
+    <Content Include="libraries\pages\plugins\pace\pace.min.js" />
+    <Content Include="libraries\pages\plugins\switchery\css\switchery.min.css" />
+    <Content Include="libraries\pages\plugins\switchery\js\switchery.min.js" />
+    <Content Include="styles\pages\fonts\montserrat\montserrat-bold-webfont.svg" />
+    <Content Include="styles\pages\fonts\montserrat\montserrat-regular-webfont.svg" />
+    <Content Include="styles\pages\fonts\pages-icon\Pages-icon.svg" />
+    <Content Include="styles\pages\mixins.less" />
+    <Content Include="styles\pages\modules.less" />
+    <Content Include="styles\pages\modules\alerts.less" />
+    <Content Include="styles\pages\modules\buttons.less" />
+    <Content Include="styles\pages\modules\form_elements.less" />
+    <Content Include="styles\pages\modules\layout.less" />
+    <Content Include="styles\pages\modules\list.less" />
+    <Content Include="styles\pages\modules\login.less" />
+    <Content Include="styles\pages\modules\misc.less" />
+    <Content Include="styles\pages\modules\modals.less" />
+    <Content Include="styles\pages\modules\notifications.less" />
+    <Content Include="styles\pages\modules\panels.less" />
+    <Content Include="styles\pages\modules\print.less" />
+    <Content Include="styles\pages\modules\progress_indicators.less" />
+    <Content Include="styles\pages\modules\tables.less" />
+    <Content Include="styles\pages\modules\tabs_accordian.less" />
+    <Content Include="styles\pages\modules\typography.less" />
+    <Content Include="styles\pages\modules\z_index.less" />
+    <Content Include="styles\pages\pages-icons.css" />
+    <Content Include="styles\pages\pages.less" />
+    <Content Include="styles\pages\responsive.less" />
+    <Content Include="styles\pages\themes\default\theme.less" />
+    <Content Include="styles\pages\themes\default\var.less" />
+    <Content Include="styles\pages\fonts\montserrat\Montserrat-Bold.ttf" />
+    <Content Include="styles\pages\fonts\montserrat\Montserrat-Regular.ttf" />
+    <Content Include="styles\pages\fonts\pages-icon\Pages-icon.eot" />
+    <Content Include="styles\pages\fonts\pages-icon\Pages-icon.ttf" />
+    <Content Include="styles\pages\fonts\pages-icon\Pages-icon.woff" />
+    <Content Include="styles\pages\typography.less" />
+    <None Include="styles\Main.less" />
+    <Content Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="libraries\angular\angular-ui-router.min.js" />
+    <Content Include="app\patients\Patients.html" />
+    <Content Include="libraries\underscore\underscore-min.js" />
+    <Content Include="libraries\angular\angular-animate.min.js" />
+    <Content Include="libraries\angular\angular-aria.min.js" />
+    <Content Include="app\library\Error.html" />
+    <Content Include="libraries\angular\angular-messages.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="libraries\pages\plugins\font-awesome\css\" />
+    <Folder Include="libraries\pages\plugins\font-awesome\fonts\" />
+    <Folder Include="libraries\pages\plugins\font-awesome\less\" />
+    <Folder Include="libraries\pages\plugins\font-awesome\scss\" />
+    <Folder Include="libraries\pages\plugins\jquery-datatable\extensions\Bootstrap\" />
+    <Folder Include="libraries\pages\plugins\jquery-datatable\extensions\ColReorder\js\" />
+    <Folder Include="libraries\pages\plugins\jquery-ui\images\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+</Project>

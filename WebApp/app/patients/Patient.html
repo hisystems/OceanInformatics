@@ -1,0 +1,27 @@
+﻿<div class="modal-header clearfix text-left">
+    <h5>{{modal.params.patient.familyName | uppercase}}, {{modal.params.patient.givenName}}</h5>
+</div>
+
+<error error="modal.error"></error>
+
+<form class="modal-body">
+    <div class="form-group row">
+        <label>Family Name</label>
+        <input type="text" ng-model="modal.params.patient.familyName" placeholder="Family name" class="form-control"/>
+    </div>
+
+    <div class="form-group row">
+        <label>Firstname</label>
+        <input type="text" ng-model="modal.params.patient.givenName" placeholder="Given name" class="form-control" />
+    </div>
+
+    <div class="form-group row">
+        <label>Gender</label>
+        <select ng-model="modal.params.patient.gender" ng-options="+key as value for (key , value) in modal.genders" class="form-control"></select>
+    </div>
+</form>
+
+
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="modal.save(modal.params.patient)">Save</button>
+</div>

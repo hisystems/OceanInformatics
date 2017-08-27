@@ -1,0 +1,10 @@
+packages
+bin
+obj
+WebApp/app/*.js
+*.userprefs
+node_modules
+*.js.map
+
+.vs/*
+*.DS_Store
